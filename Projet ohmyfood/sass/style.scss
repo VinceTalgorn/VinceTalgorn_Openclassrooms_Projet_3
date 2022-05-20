@@ -1,16 +1,123 @@
 @import "libs/base.scss";
 
-$primary: #9356DC;
-$secondary : #FF79DA;
-$tertiary : #99E2D0;
-
-
-
 body{
-    background-color: $secondary ;
+    font-family: $roboto_police;
+    margin: 0;
+
+}
+// Header
+
+h1{ 
+    font-family: $shrikhand_police;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
 }
 
-p{
-color: blue;
-font-family: $shrikhand_police;
+// Recherche
+
+.box{
+    display: flex;
+    justify-content: center;
+    background-color: $grey;
+    box-shadow: 0 -4px 2px -1px #D2D1D2;
+    .icon_search{
+        height: 50px;
+        width: 50px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search_text{
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
+        padding-left: 40px;
+        border: none;
+        background-color: $grey;
+    }
+
 }
+
+//Reserver
+
+#Reserver{
+    text-align: center;
+    background-color: $light_grey;
+    .explorer_btn{
+        border-radius: 30px;
+        padding: 15px; 
+        background: linear-gradient($secondary, $primary);
+        color: white;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        box-shadow: 2px 1px 8px -3px black;
+        &:hover{
+            transform: scale(1.04);
+        }
+    }
+
+
+}
+
+h2{
+    margin-top: 0;
+    padding-top: 50px;
+}
+// Fonctionnement
+
+#Fonctionnement{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ol{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 30px;
+    counter-reset: steps;
+    }
+
+.Font__list {
+    background-color: $light_grey;
+    padding: 25px 32px;
+    border-radius: 20px;
+    box-shadow: 2px 1px 8px -3px black;
+    position: relative;
+    .fa-solid{
+        color: gray;
+        margin-right: 20px;    
+    }
+        &:hover {
+            transform: scale(1.02);
+            background-color: $primary_light;
+                .fa-solid{
+                    color: $primary;
+                } 
+        } 
+        &::before{
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: $primary;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute; 
+            width: 2 * $bullet_height; 
+            height: 2 * $bullet_height;
+            left:  - $bullet_height;
+            bottom: 23px;
+            
+} 
+}
+
+//Restaurant
