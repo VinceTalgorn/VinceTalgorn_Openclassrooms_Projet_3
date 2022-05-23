@@ -1,4 +1,5 @@
 @import "libs/base.scss";
+@import "libs/mixins.scss";
 
 body{
     font-family: $roboto_police;
@@ -60,7 +61,7 @@ h1{
         margin-bottom: 30px;
         box-shadow: 2px 1px 8px -3px black;
         &:hover{
-            transform: scale(1.04);
+            transform: scale(1.1);
         }
     }
 
@@ -97,7 +98,7 @@ ol{
         margin-right: 20px;    
     }
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.04);
             background-color: $primary_light;
                 .fa-solid{
                     color: $primary;
@@ -115,9 +116,105 @@ ol{
             width: 2 * $bullet_height; 
             height: 2 * $bullet_height;
             left:  - $bullet_height;
-            bottom: 23px;
-            
-} 
+            bottom: 23px;    
+        } 
 }
 
 //Restaurant
+
+#Restaurants{
+    background-color: $light_grey;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Bloc_restaurants{
+    padding-bottom: 75px;
+        .cube_restaurants{
+            width: auto;
+            height: auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px 1px #f2f2f2;
+            margin-top: 30px;
+            position: relative;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.04);
+            }
+        }
+// Création de la bannière "Nouveau" dans les images
+        .new_card{
+            position: relative;
+            &::before{
+                content: "Nouveau";
+                position: absolute;
+                height: 30px;
+                width: 80px;
+                background-color: $tertiary;
+                color: darken($tertiary, 40%);
+                display: grid;
+                place-items: center;
+                top: 20px;
+                right: 20px;
+                    }    
+                }
+        .img_restaurants{
+            object-fit: cover;
+            width: 100%;
+            height: 350px;
+            border-radius: 15px 15px 0 0;
+        }
+}
+
+
+
+
+.detail_restaurants{
+    padding-left: 20px;
+    h3{
+        margin: 0;
+        padding-top: 20px;
+    }
+    p{
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    //Création animation coeur
+    &::before{
+        @include heart;
+    }
+    &::after{
+        @include heart ($opacity : 0, $font-weight : 900, $color : transparent);
+    }
+    &:hover::after{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+}
+
+//Footer
+
+.footer{
+    color: white;
+    background-color: #363535;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    h3{
+        margin-top:0;
+        padding-top: 20px;
+        font-family: $shrikhand_police;
+    }
+    .footer_lien{
+        margin-top: 10px;
+        i{
+            width: 10px;
+            height: 10px;
+            padding-right: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

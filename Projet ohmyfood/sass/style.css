@@ -73,8 +73,8 @@ h1 a {
 }
 
 #Reserver .explorer_btn:hover {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 h2 {
@@ -115,8 +115,8 @@ ol {
 }
 
 .Font__list:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
   background-color: #F5EDFE;
 }
 
@@ -138,5 +138,150 @@ ol {
   height: 26px;
   left: -13px;
   bottom: 23px;
+}
+
+#Restaurants {
+  background-color: #F7F7F6;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Bloc_restaurants {
+  padding-bottom: 75px;
+}
+
+.Bloc_restaurants .cube_restaurants {
+  width: auto;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px 1px #f2f2f2;
+          box-shadow: 5px 5px 5px 1px #f2f2f2;
+  margin-top: 30px;
+  position: relative;
+}
+
+.Bloc_restaurants .cube_restaurants:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.Bloc_restaurants .new_card {
+  position: relative;
+}
+
+.Bloc_restaurants .new_card::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  background-color: #99E2D0;
+  color: #278870;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  top: 20px;
+  right: 20px;
+}
+
+.Bloc_restaurants .img_restaurants {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px 15px 0 0;
+}
+
+.detail_restaurants {
+  padding-left: 20px;
+}
+
+.detail_restaurants h3 {
+  margin: 0;
+  padding-top: 20px;
+}
+
+.detail_restaurants p {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.detail_restaurants::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 25px;
+  position: absolute;
+  right: 50px;
+  top: 87%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: inherit;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.detail_restaurants::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 25px;
+  position: absolute;
+  right: 50px;
+  top: 87%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.detail_restaurants:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer {
+  color: white;
+  background-color: #363535;
+  padding-left: 40px;
+  padding-bottom: 30px;
+}
+
+.footer h3 {
+  margin-top: 0;
+  padding-top: 20px;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.footer .footer_lien {
+  margin-top: 10px;
+}
+
+.footer .footer_lien i {
+  width: 10px;
+  height: 10px;
+  padding-right: 20px;
+}
+
+.footer .footer_lien a {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
