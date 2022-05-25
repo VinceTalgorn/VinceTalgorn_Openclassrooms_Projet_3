@@ -1,0 +1,24 @@
+
+.footer{
+    color: white;
+    background-color: #363535;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    h3{
+        margin-top:0;
+        padding-top: 20px;
+        font-family: $shrikhand_police;
+    }
+    .footer_lien{
+        margin-top: 10px;
+        i{
+            width: 10px;
+            height: 10px;
+            padding-right: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

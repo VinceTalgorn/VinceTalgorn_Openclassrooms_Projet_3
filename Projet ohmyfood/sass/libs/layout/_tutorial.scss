@@ -1,0 +1,51 @@
+#Fonctionnement{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ol{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: auto;
+    gap: 30px;
+    counter-reset: steps;
+        @media (min-width : 992px){
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+    }
+
+.Font__list {
+    background-color: $light_grey;
+    padding: 25px 32px;
+    @include border-radius(20px 20px 20px 20px);
+    box-shadow: 2px 1px 8px -3px black;
+    position: relative;
+    .fa-solid{
+        color: gray;
+        margin-right: 20px;    
+    }
+        &:hover {
+            transform: scale(1.04);
+            background-color: $primary_light;
+                .fa-solid{
+                    color: $primary;
+                } 
+        } 
+        &::before{
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: $primary;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute; 
+            width: 2 * $bullet_height; 
+            height: 2 * $bullet_height;
+            left:  - $bullet_height;
+            bottom: 23px;    
+        } 
+}

@@ -1,0 +1,22 @@
+.box{
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
+    box-shadow: 0 -4px 2px -1px #D2D1D2;
+    .icon_search{
+        height: 50px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search_text{
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
+        padding-left: 25px;
+        border: none;
+        background-color: #EAEAEA;
+    }
+
+}

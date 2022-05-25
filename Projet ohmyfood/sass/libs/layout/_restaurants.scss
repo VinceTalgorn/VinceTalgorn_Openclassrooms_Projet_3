@@ -1,0 +1,68 @@
+@import "../utils/animations";
+
+#Menus{
+    background-color: $light_grey;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.Blocs_menus{
+    padding-bottom: 75px;
+    @media (min-width : 768px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+    }
+        .cube_restaurants{
+            width: auto;
+            height: auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px 1px #f2f2f2;
+            margin-top: 30px;
+            position: relative;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.04);
+            }
+        }
+// Création de la bannière "Nouveau" dans les images
+        .new_menus{
+            position: relative;
+            &::before{
+                content: "Nouveau";
+                position: absolute;
+                height: 30px;
+                width: 80px;
+                background-color: $tertiary;
+                color: darken($tertiary, 40%);
+                display: grid;
+                place-items: center;
+                top: 20px;
+                right: 20px;
+                    }    
+                }
+        .img_menus{
+            object-fit: cover;
+            width: 100%;
+            height: 350px;
+            @include border-radius(15px 15px 0 0);
+        }
+}
+.detail_menus{
+    padding-left: 20px;
+    h3{
+        margin: 0;
+        padding-top: 20px;
+    }
+    p{
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    @include heart-animation;
+}
+
+.link_menus{
+    text-decoration: none;
+    color: black;
+}

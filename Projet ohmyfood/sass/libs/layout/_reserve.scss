@@ -1,0 +1,13 @@
+#Reserver{
+    text-align: center;
+    background-color: #F7F7F6;
+    padding-left: 125px;
+    padding-right: 125px;
+    .detail_introduction{
+        color: grey;
+        font-size: 18px;
+    }
+    .btn{
+        @include btn;
+    }
+}

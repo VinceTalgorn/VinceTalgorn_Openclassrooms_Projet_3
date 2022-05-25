@@ -1,0 +1,53 @@
+
+@mixin font-awesome ($font-weight : 400){
+    position: absolute;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 free";
+    font-weight: $font-weight;
+} 
+
+
+@mixin heart($opacity : 1, $font-weight : 400, $color : inherit) {
+    @include font-awesome($font-weight);
+    content: "\f004";
+    font-size: 25px;
+    right: 50px;
+    top: 20%; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: $color;
+    background-image: linear-gradient($secondary, $primary);
+    opacity: $opacity;
+    transition: all 200ms ease-in-out; 
+}
+
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+@mixin overflow_items{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin btn {
+    border-radius: 30px;
+    padding: 18px; 
+    background: linear-gradient($secondary, $primary);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 2px 1px 8px -3px black;
+    font-size: 16px;
+    font-family: $roboto_police;
+    text-align: center;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

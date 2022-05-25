@@ -1,0 +1,43 @@
+//Création animation du coeur
+
+@mixin heart-animation{
+    position: relative;
+    &::before{
+        @include heart;
+    }
+    &::after{
+        @include heart ($opacity : 0, $font-weight : 900, $color : transparent);
+    }
+    &:hover::after{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+//Check animation
+
+@mixin check-animation {
+    &:hover{
+        .menu--item__check{
+            margin-right: 0;
+            i{
+                transform: rotate(1turn);
+                transition-duration: 500ms;
+                transition-delay: 150ms;
+            }
+        }
+    }
+}
+
+//Animation chargement de la page
+
+@keyframes appear {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(1);
+        opacity: 1;
+    }
+}
