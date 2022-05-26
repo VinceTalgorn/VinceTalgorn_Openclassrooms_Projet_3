@@ -71,7 +71,7 @@
     box-shadow: 5px 5px 5px 1px #f2f2f2; 
     
     // 2 à 4 car le h3 compte pour un enfant donc on décale de 1
-    @for $i from 2 through 4 {
+    @for $i from 2 through 5 {
         &:nth-child(#{$i}) {
             animation-delay: 100ms * $i;
         }
@@ -108,9 +108,10 @@
  .position_btn{
      display: grid;
      place-items: center;
-     margin-top: 50px;
-     padding-bottom: 50px;
+     margin-top: 40px;
+     padding-bottom: 40px;
     .btn{
         @include btn;
+        padding: 15px 35px 15px 35px;
     }
 }
