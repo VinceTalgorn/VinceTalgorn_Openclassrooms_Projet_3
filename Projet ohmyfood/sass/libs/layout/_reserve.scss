@@ -9,5 +9,6 @@
     }
     .btn{
         @include btn;
+        margin: 40px 0;
     }
 }

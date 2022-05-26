@@ -37,12 +37,10 @@
 
 @mixin btn {
     border-radius: 30px;
-    padding: 18px; 
+    padding: 18px 30px; 
     background: linear-gradient($secondary, $primary);
     color: white;
     border: none;
-    margin-top: 10px;
-    margin-bottom: 30px;
     box-shadow: 2px 1px 8px -3px black;
     font-size: 16px;
     font-family: $roboto_police;

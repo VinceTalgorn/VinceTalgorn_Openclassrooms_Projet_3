@@ -1,24 +1,32 @@
 
-.footer{
-    color: white;
+.container{
+    display: flex;
+    flex-direction: column;
     background-color: #363535;
-    padding-left: 40px;
-    padding-bottom: 30px;
-    h3{
-        margin-top:0;
-        padding-top: 20px;
+    padding: 16px;
+    
+    .footer_logo{
+        color: white;
         font-family: $shrikhand_police;
+        font-size: 19px;
+        margin-bottom: 16px;
     }
-    .footer_lien{
-        margin-top: 10px;
-        i{
-            width: 10px;
-            height: 10px;
-            padding-right: 20px;
+    .footer_list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .footer_listElem{
+            margin: 8px 0;
+            a{
+                text-decoration: none;
+                color: white;
+                i{
+                    margin-right: 8px;
+                }
+            }
         }
-        a{
-            text-decoration: none;
-            color: white;
+        :first-child{
+            margin-top: 0;
         }
     }
 }

@@ -1,3 +1,75 @@
+//Animation loader
+@keyframes disappear {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+    
+}
+
+@keyframes rot1 {
+    100% {
+      transform: skew(-10deg) translateX(50px) rotate(405deg);
+    }
+  }
+  @keyframes rot2 {
+    100% {
+      transform: skew(-10deg) rotate(525deg);
+    }
+  }
+  @keyframes rot3 {
+    100% {
+      transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(645deg);
+    }
+  }
+
+.loader{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background: white;  
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 200ms $animation-duration forwards;
+    transform-origin: top; 
+    .loader_logo{
+        position: fixed;
+        left: calc(50% - 125px);
+        top: calc(50vh - 75px);
+            div {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                border-top: 20px solid;
+                border-radius: 50%;   
+            }
+            .first {
+                transform: skew(-10deg) translateX(50px) rotate(45deg);
+                animation: rot1 1.5s ease infinite;
+                border-color: $primary;
+              }
+              .second {
+                transform: skew(-10deg) rotate(165deg);
+                animation: rot2 1.5s ease infinite;
+                border-color: $secondary;
+              }
+              .third {
+                transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(285deg);
+                animation: rot3 1.5s ease infinite;
+                border-color: $tertiary;
+              }
+    } 
+}
+
+
+ 
+
+  
+
 //Création animation du coeur
 
 @mixin heart-animation{
