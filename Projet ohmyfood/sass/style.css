@@ -331,6 +331,32 @@ a {
   border-color: #99E2D0;
 }
 
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(1);
+            transform: translateY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(1);
+            transform: translateY(1);
+    opacity: 1;
+  }
+}
+
 #Menus {
   background-color: #F7F7F6;
   padding: 20px;
@@ -795,6 +821,19 @@ h4 {
   -webkit-animation: rot3 1.5s ease infinite;
           animation: rot3 1.5s ease infinite;
   border-color: #99E2D0;
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(1);
+            transform: translateY(1);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 992px) {
