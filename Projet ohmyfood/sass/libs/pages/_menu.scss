@@ -122,12 +122,4 @@ h4 {
     }
 }
 
-@media (min-width : 1000px){
-    .test_optimisation{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
-    column-gap: 8px;
-    }
-    
-}
 

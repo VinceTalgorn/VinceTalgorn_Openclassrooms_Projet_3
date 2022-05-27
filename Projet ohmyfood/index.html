@@ -9,8 +9,7 @@
     <title>Page d'accueil</title>
 </head>
 <body>
-<!--Loeader-->
-
+<!--Loader-->
 <div class="loader">
   <div class="loader_logo">
     <div class="first"></div>
@@ -18,17 +17,14 @@
     <div class="third"></div>
   </div>
 </div>
-
 <!--Logo-->
-  
 <a href="index.html">
   <header> 
     <h1>ohmyfood</h1>
   </header>
 </a>
 <!--Bouton recherche-->
-    <section id="Recherche">
-            <div class="box">
+            <div class="search_box">
               <div class="icon_search">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
@@ -39,33 +35,34 @@
                 <i class="fas fa-search"></i>
               </div>
             </div>
-        </section>
-
 <!--Réserver-->
     <section id="Reserver">
-        <h2>Réservez le menu qui vous convient</h2>
+        <h2>Réservez le menu qui<br> vous convient</h2>
         <p class="detail_introduction">Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
         <button class="btn">Explorer nos restaurants</button>
     </section>
 <!--Fonctionnement-->
-    <section id="Fonctionnement">
+    <section id="tutorial">
+      <div class="container_tutorial">
         <h2>Fonctionnement</h2>
-          <ol>
-              <li class="Font__list"><i class="fa-solid fa-mobile-screen-button"></i>
+          <ol class="List">
+              <li class="List__content"><i class="fa-solid fa-mobile-screen-button"></i>
                 Choisissez un restaurant</li>
-              <li class="Font__list"><i class="fa-solid fa-list"></i>
+              <li class="List__content"><i class="fa-solid fa-list"></i>
                 Composez votre menu</li>
-              <li class="Font__list"><i class="fa-solid fa-store"></i>
+              <li class="List__content"><i class="fa-solid fa-store"></i>
                 Dégustez au restaurant</li>
           </ol>
+        </div>
     </section>
 <!--Restaurant-->
     <section id="Menus">
+      <div class="container_menu">
       <h2>Restaurants</h2>
       <div class="Blocs_menus">  
         <a class="link_menus" href="menu/menu_1.html">
           <div class="cube_restaurants new_menus">
-            <img class="img_menus" src="assets/menu_1.jpg" alt="img_restaurant_1"></img>
+            <img class="img_menus" src="assets/menu_1.jpg" alt="img_restaurant_1">
             <div class="detail_menus">
               <h3>La palette du goût</h3>
               <p>Ménilmontant</p>
@@ -74,7 +71,7 @@
         </a>
         <a class="link_menus" href="menu/menu_2.html">
           <div class="cube_restaurants new_menus">
-            <img class="img_menus" src="assets/menu_2.jpg" alt="img_restaurant_1"></img>
+            <img class="img_menus" src="assets/menu_2.jpg" alt="img_restaurant_1">
             <div class="detail_menus">
               <h3>La note enchantée</h3>
               <p>Charonne</p>
@@ -83,7 +80,7 @@
         </a>
         <a class="link_menus" href="menu/menu_3.html">
           <div class="cube_restaurants">
-            <img class="img_menus" src="assets/menu_3.jpg" alt="img_restaurant_3"></img>
+            <img class="img_menus" src="assets/menu_3.jpg" alt="img_restaurant_3">
             <div class="detail_menus">
               <h3>À la française</h3>
               <p>Cité Rouge</p>
@@ -92,7 +89,7 @@
         </a>
         <a class="link_menus" href="menu/menu_4.html">
           <div class="cube_restaurants">
-            <img class="img_menus" src="assets/menu_4.jpg" alt="img_restaurant_4"></img>
+            <img class="img_menus" src="assets/menu_4.jpg" alt="img_restaurant_4">
             <div class="detail_menus">
               <h3>Le délice des sens</h3>
               <p>Folie-Méricourt</p>
@@ -116,7 +113,7 @@
               <a href="#">Mentions légales</a>
             </li>
             <li class="footer_listElem">
-              <a href="#">Contact</a>
+              <a href="mailto:someone@yoursite.com">Contact</a>
             </li>
           </ul>  
         </div>

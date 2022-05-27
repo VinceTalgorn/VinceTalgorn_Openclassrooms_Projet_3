@@ -1,4 +1,4 @@
-
+//Optimisation pour l'implantation des icones font awesome, il faut modifier le font et ajuter le content pour avoir la bonne icone
 @mixin font-awesome ($font-weight : 400){
     position: absolute;
     display: inline-block;
@@ -9,7 +9,7 @@
     font-weight: $font-weight;
 } 
 
-
+//Création de l'icone coeur, on passe d'un coeur sans fond à un coeur solid avec le dégradé
 @mixin heart($opacity : 1, $font-weight : 400, $color : inherit) {
     @include font-awesome($font-weight);
     content: "\f004";
@@ -24,28 +24,34 @@
     transition: all 200ms ease-in-out; 
 }
 
-
+//Optimisation des borders radius
 @mixin border-radius($radius) {
 	border-radius: $radius;
 }
 
+//Optimisation des blocs pour l'animation des entrées, plats et desserts
 @mixin overflow_items{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
+//Industrialisation des boutons sur le site web
 @mixin btn {
+    cursor: pointer;
     border-radius: 30px;
     padding: 18px 30px; 
-    background: linear-gradient($secondary, $primary);
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     color: white;
+    background-color: black;
     border: none;
     box-shadow: 2px 1px 8px -3px black;
     font-size: 16px;
     font-family: $roboto_police;
     text-align: center;
+    transition-duration: $transition-duration;
     &:hover{
-        transform: scale(1.1);
+        background-color: white;  
+        box-shadow: 2px 1px 12px -3px black;
     }
 }

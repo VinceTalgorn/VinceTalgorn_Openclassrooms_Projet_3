@@ -2,9 +2,8 @@
 .container{
     display: flex;
     flex-direction: column;
-    background-color: #363535;
+    background-color: $background_footer;
     padding: 16px;
-    
     .footer_logo{
         color: white;
         font-family: $shrikhand_police;
@@ -25,6 +24,7 @@
                 }
             }
         }
+        //Le premier enfant n'a pas de margin dans la liste
         :first-child{
             margin-top: 0;
         }

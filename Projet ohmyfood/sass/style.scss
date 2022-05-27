@@ -1,6 +1,5 @@
 @import "libs/base.scss";
 @import "libs/utils/mixins";
-@import "libs/layout/header";
 @import "libs/layout/footer";
 @import "libs/layout/search";
 @import "libs/layout/tutorial";
@@ -9,3 +8,4 @@
 @import "libs/pages/menu";
 @import "libs/utils/animations";
 @import "libs/utils/variables";
+@import "libs/layout/responsive";

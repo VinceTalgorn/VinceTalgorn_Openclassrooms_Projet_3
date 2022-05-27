@@ -8,7 +8,7 @@
     }
     
 }
-
+//Animation des roations lors du loader de la page principal
 @keyframes rot1 {
     100% {
       transform: skew(-10deg) translateX(50px) rotate(405deg);
@@ -98,18 +98,5 @@
                 transition-delay: 150ms;
             }
         }
-    }
-}
-
-//Animation chargement de la page
-
-@keyframes appear {
-    0% {
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(1);
-        opacity: 1;
     }
 }
