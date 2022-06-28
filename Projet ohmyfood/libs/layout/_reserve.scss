@@ -1,13 +1,13 @@
-#Reserver{
-    text-align: center;
-    background-color: #F7F7F6;
-    padding: 16px;
-    .detail_introduction{
-        color: grey;
-        font-size: 18px;
-    }
-    .btn{
-        @include btn;
-        margin: 16px;
-    }
+#reserve {
+  text-align: center;
+  background-color: #f7f7f6;
+  padding: 16px;
+  .reserve_details {
+    color: grey;
+    font-size: 18px;
+  }
+  .reserve_btn {
+    @include btn;
+    margin: 16px;
+  }
 }

@@ -1,6 +1,6 @@
 #tutorial{
     padding: 20px;
-    .container_tutorial{
+    .tutorial_container{
         max-width: 1280px;
         margin:auto;
         position: relative;
@@ -8,7 +8,7 @@
 }
 
 //Création des 3 blocs de fonctionnement
-.List{
+.tutorial_list{
     display: flex;
     flex-direction: column;
     list-style-type: none;
