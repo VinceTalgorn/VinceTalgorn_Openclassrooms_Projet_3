@@ -1,5 +1,5 @@
 //Optimisation pour l'implantation des icones font awesome, il faut modifier le font et ajuter le content pour avoir la bonne icone
-@mixin font-awesome ($font-weight : 400){
+@mixin font-awesome($font-weight: 400) {
     position: absolute;
     display: inline-block;
     font-style: normal;
@@ -7,30 +7,30 @@
     text-rendering: auto;
     font-family: "Font Awesome 5 free";
     font-weight: $font-weight;
-} 
+}
 
 //Création de l'icone coeur, on passe d'un coeur sans fond à un coeur solid avec le dégradé
-@mixin heart($opacity : 1, $font-weight : 400, $color : inherit) {
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
     @include font-awesome($font-weight);
     content: "\f004";
     font-size: 25px;
     right: 30px;
-    top: 20%; 
+    top: 20%;
     background-clip: text;
     -webkit-background-clip: text;
     color: $color;
     background-image: linear-gradient($secondary, $primary);
     opacity: $opacity;
-    transition: all 200ms ease-in-out; 
+    transition: all 200ms linear;
 }
 
 //Optimisation des borders radius
 @mixin border-radius($radius) {
-	border-radius: $radius;
+    border-radius: $radius;
 }
 
 //Optimisation des blocs pour l'animation des entrées, plats et desserts
-@mixin overflow_items{
+@mixin overflow_items {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -40,8 +40,12 @@
 @mixin btn {
     cursor: pointer;
     border-radius: 30px;
-    padding: 18px 30px; 
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    padding: 18px 30px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(147, 86, 220, 0.9),
+        rgba(255, 121, 218, 0.9)
+    );
     color: white;
     background-color: black;
     border: none;
@@ -50,8 +54,8 @@
     font-family: $roboto_police;
     text-align: center;
     transition-duration: $transition-duration;
-    &:hover{
-        background-color: white;  
+    &:hover {
+        background-color: white;
         box-shadow: 2px 1px 12px -3px black;
     }
 }

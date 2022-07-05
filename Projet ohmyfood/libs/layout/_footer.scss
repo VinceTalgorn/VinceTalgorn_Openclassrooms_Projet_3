@@ -1,32 +1,24 @@
-
-.footer{
+footer {
     display: flex;
     flex-direction: column;
     background-color: $background_footer;
     padding: 16px;
-    .footer_logo{
+    .footer_logo {
         color: white;
         font-family: $shrikhand_police;
-        font-size: 19px;
-        margin-bottom: 16px;
+        padding-bottom: 16px;
     }
-    .footer_list{
+    .footer_list {
         list-style: none;
-        padding: 0;
-        margin: 0;
-        .footer_listElem{
-            margin: 8px 0;
-            a{
+        .footer_listElem {
+            padding-bottom: 3px;
+            a {
                 text-decoration: none;
                 color: white;
-                i{
-                    margin-right: 8px;
+                i {
+                    width: 25px;
                 }
             }
-        }
-        //Le premier enfant n'a pas de margin dans la liste
-        :first-child{
-            margin-top: 0;
         }
     }
 }

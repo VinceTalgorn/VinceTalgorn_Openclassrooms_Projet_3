@@ -1,5 +1,71 @@
+/* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -8,17 +74,12 @@ body {
 h1 {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 0;
-  padding-bottom: 15px;
   font-size: 35px;
   color: black;
 }
 
 h2 {
-  margin-top: 0;
   font-size: 30px;
-  padding-left: 20px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -34,48 +95,41 @@ a {
   text-decoration: none;
 }
 
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   background-color: #363535;
   padding: 16px;
 }
 
-.footer .footer_logo {
+footer .footer_logo {
   color: white;
   font-family: "Shrikhand", sans-serif;
-  font-size: 19px;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
-.footer .footer_list {
+footer .footer_list {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.footer .footer_list .footer_listElem {
-  margin: 8px 0;
+footer .footer_list .footer_listElem {
+  padding-bottom: 3px;
 }
 
-.footer .footer_list .footer_listElem a {
+footer .footer_list .footer_listElem a {
   text-decoration: none;
   color: white;
 }
 
-.footer .footer_list .footer_listElem a i {
-  margin-right: 8px;
-}
-
-.footer .footer_list :first-child {
-  margin-top: 0;
+footer .footer_list .footer_listElem a i {
+  width: 25px;
 }
 
 .search_box {
   display: flex;
   justify-content: center;
-  background-color: #EAEAEA;
-  box-shadow: 0 -4px 2px -1px #D2D1D2;
+  background-color: #eaeaea;
+  box-shadow: 0 -4px 2px -1px #d2d1d2;
 }
 
 .search_box .search_icon {
@@ -85,7 +139,7 @@ a {
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 .search_box .search_text {
@@ -94,49 +148,33 @@ a {
   font-size: 18px;
   padding-left: 25px;
   border: none;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 #tutorial {
-  padding: 20px;
+  padding: 20px 20px 60px 20px;
 }
 
-#tutorial .tutorial_container {
-  max-width: 1280px;
-  margin: auto;
-  position: relative;
+#tutorial h2 {
+  padding-bottom: 20px;
 }
 
 .tutorial_list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  width: auto;
   gap: 30px;
   counter-reset: steps;
+  padding-left: 10px;
 }
 
 .tutorial_list__content {
   background-color: #F7F7F6;
-  padding: 25px 32px;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   box-shadow: 2px 1px 8px -3px black;
-  position: relative;
-}
-
-.tutorial_list__content .fa-solid {
-  color: gray;
-  margin-right: 20px;
-}
-
-.tutorial_list__content:hover {
-  transform: scale(1.04);
-  background-color: #F5EDFE;
-  transition-duration: 0.25s;
-}
-
-.tutorial_list__content:hover .fa-solid {
-  color: #9356DC;
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 20px 0px;
 }
 
 .tutorial_list__content::before {
@@ -144,14 +182,27 @@ a {
   counter-increment: steps;
   color: white;
   background-color: #9356DC;
-  display: grid;
-  place-items: center;
   border-radius: 50%;
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  left: -13px;
-  bottom: 23px;
+  left: 0;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.tutorial_list__content .fa-solid {
+  color: gray;
+  width: 35px;
+}
+
+.tutorial_list__content:nth-child(3) {
+  background-color: #F5EDFE;
+}
+
+.tutorial_list__content:nth-child(3) .fa-solid {
+  color: #9356DC;
 }
 
 #reserve {
@@ -274,41 +325,107 @@ a {
   padding: 20px;
 }
 
-#menu .menu_container {
-  max-width: 1280px;
-  margin: auto;
-}
-
-.restaurant_blocs {
-  padding-bottom: 75px;
-}
-
-.restaurant_blocs .restaurant_links {
+.restaurant_links {
   text-decoration: none;
+  display: block;
   color: black;
+  border-radius: 15px;
+  padding: 10px 0 10px 0;
 }
 
-.restaurant_blocs .restaurant_links .restaurant_container {
-  width: auto;
-  height: auto;
-  background-color: white;
+.restaurant_links .restaurant_container {
   border-radius: 20px;
   box-shadow: 5px 5px 5px 1px #f2f2f2;
-  margin-top: 30px;
-  position: relative;
 }
 
-.restaurant_blocs .restaurant_links .restaurant_container:hover {
+.restaurant_links .restaurant_container:hover {
   cursor: pointer;
-  transform: scale(1.04);
-  transition-duration: 0.25s;
 }
 
-.restaurant_blocs .restaurant_links .new_menus {
+.img_restaurant {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurant_details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.restaurant_details__content {
+  flex: 1;
+}
+
+.restaurant_details h3 {
+  margin: 0;
+}
+
+.restaurant_details p {
+  margin: 0;
+}
+
+.btn_like {
+  height: 2rem;
+  width: 2rem;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.btn_like:hover::before {
+  opacity: 1;
+}
+
+.btn_like::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+}
+
+.btn_like .fa-heart {
+  background-color: white !important;
+}
+
+.btn_info {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+.btn_like:hover .like_Nobackground {
+  opacity: 0;
+}
+
+.new_menus {
   position: relative;
 }
 
-.restaurant_blocs .restaurant_links .new_menus::before {
+.new_menus::before {
   content: "Nouveau";
   position: absolute;
   height: 30px;
@@ -321,90 +438,21 @@ a {
   right: 20px;
 }
 
-.restaurant_blocs .restaurant_links .img_restaurant {
-  object-fit: cover;
-  width: 100%;
-  height: 200px;
-  border-radius: 15px 15px 0 0;
-}
-
-.restaurant_blocs .restaurant_links .restaurant_details {
-  padding-left: 20px;
-  position: relative;
-}
-
-.restaurant_blocs .restaurant_links .restaurant_details h3 {
-  margin: 0;
-  padding-top: 20px;
-}
-
-.restaurant_blocs .restaurant_links .restaurant_details p {
-  margin: 0;
-  padding-bottom: 20px;
-}
-
-.restaurant_blocs .restaurant_links .restaurant_details::before {
-  position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 25px;
-  right: 30px;
-  top: 20%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: inherit;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-
-.restaurant_blocs .restaurant_links .restaurant_details::after {
-  position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 25px;
-  right: 30px;
-  top: 20%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-}
-
-.restaurant_blocs .restaurant_links .restaurant_details:hover::after {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
 #restaurant_page header {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-#restaurant_page header::before {
+#restaurant_page header .header_arrow::before {
   position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  content: "\f177";
-  top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
-  padding-left: 20px;
-  text-decoration: none;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
   color: black;
 }
 
@@ -431,57 +479,8 @@ h4 {
 }
 
 .restaurant_menu h2 {
-  position: relative;
-  margin-top: 0;
-  padding: 0;
   font-size: 30px;
-  padding-left: 20px;
   font-family: "Shrikhand", sans-serif;
-}
-
-.restaurant_menu h2::before {
-  position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 25px;
-  right: 30px;
-  top: 20%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: inherit;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-
-.restaurant_menu h2::after {
-  position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 25px;
-  right: 30px;
-  top: 20%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-}
-
-.restaurant_menu h2:hover::after {
-  opacity: 1;
-  transform: scale(1.1);
 }
 
 .menu_category {
@@ -493,18 +492,15 @@ h4 {
   text-transform: uppercase;
   font-weight: 200;
   position: relative;
-  margin-left: 20px;
-  margin-top: 35px;
+  padding: 30px 0px 0px 20px;
 }
 
 .menu_category h3::after {
   content: "";
-  position: absolute;
+  display: block;
   background-color: #99E2D0;
   width: 45px;
   height: 3px;
-  top: 26px;
-  left: 0;
 }
 
 .menu--item {
@@ -562,7 +558,7 @@ h4 {
   display: grid;
   place-items: center;
   font-size: 25px;
-  transition: 300ms ease-in-out;
+  transition: 450ms linear;
   flex-shrink: 0;
   width: 64px;
   margin-right: -64px;
@@ -574,8 +570,8 @@ h4 {
 
 .menu--item:hover .menu--item__check i {
   transform: rotate(1turn);
-  transition-duration: 500ms;
-  transition-delay: 150ms;
+  transition-duration: 350ms;
+  transition-delay: 100ms;
 }
 
 .position_btn {
@@ -602,6 +598,17 @@ h4 {
 .position_btn .btn:hover {
   background-color: white;
   box-shadow: 2px 1px 12px -3px black;
+}
+
+.space_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+}
+
+.space_between .fa-heart {
+  background-color: #F7F7F6 !important;
 }
 
 @keyframes disappear {
@@ -695,11 +702,22 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  .restaurant_blocs {
+  #menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     row-gap: 30px;
+  }
+  #menu h2 {
+    grid-column: 1/3;
+  }
+  .restaurant_links {
+    padding: 0;
+  }
+  .tutorial_list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 

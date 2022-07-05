@@ -1,51 +1,48 @@
-#tutorial{
-    padding: 20px;
-    .tutorial_container{
-        max-width: 1280px;
-        margin:auto;
-        position: relative;
+#tutorial {
+    padding: 20px 20px 60px 20px;
+    h2 {
+        padding-bottom: 20px;
     }
 }
 
 //Création des 3 blocs de fonctionnement
-.tutorial_list{
+.tutorial_list {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    width: auto;
     gap: 30px;
-    counter-reset: steps;  
-        &__content {
-            background-color: $light_grey;
-            padding: 25px 32px;
-            @include border-radius(20px 20px 20px 20px);
-            box-shadow: 2px 1px 8px -3px black;
-            position: relative;
-                .fa-solid{
-                    color: gray;
-                    margin-right: 20px;    
-                 }
-                &:hover {
-                    transform: scale(1.04);
-                    background-color: $primary_light;
-                    transition-duration: $transition-duration;
-                        .fa-solid{
-                            color: $primary;
-                        } 
-                } 
-                &::before{
-                    content: counter(steps);
-                    counter-increment: steps;
-                    color: white;
-                    background-color: $primary;
-                    display: grid;
-                    place-items: center;
-                    border-radius: 50%;
-                    position: absolute; 
-                    width: 2 * 13px; 
-                    height: 2 * 13px;
-                    left:  - 13px;
-                    bottom: 23px;    
-                } 
+    counter-reset: steps;
+    padding-left: 10px;
+    &__content {
+        background-color: $light_grey;
+        border-radius: 20px;
+        box-shadow: 2px 1px 8px -3px black;
+        display: flex;
+        align-items: center;
+        padding: 20px 20px 20px 0px;
+        &::before {
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: $primary;
+            border-radius: 50%;
+            left: 0;
+            transform: translate(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
         }
+        .fa-solid {
+            color: gray;
+            width: 35px;
+        }
+        &:nth-child(3) {
+            background-color: $primary_light;
+            .fa-solid {
+                color: $primary;
+            }
+        }
+    }
 }
