@@ -197,6 +197,17 @@ footer .footer_list .footer_listElem a i {
   border-color: #99E2D0;
 }
 
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #restaurant_page .title_pages {
   position: relative;
   display: flex;
@@ -463,6 +474,17 @@ h4 {
   transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(285deg);
   animation: rot3 1.5s ease infinite;
   border-color: #99E2D0;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 992px) {
