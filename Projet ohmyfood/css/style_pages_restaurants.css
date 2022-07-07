@@ -1,0 +1,502 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #363535;
+  padding: 16px;
+}
+
+footer .footer_logo {
+  color: white;
+  font-family: "Shrikhand", sans-serif;
+  padding-bottom: 16px;
+}
+
+footer .footer_list {
+  list-style: none;
+}
+
+footer .footer_list .footer_listElem {
+  padding-bottom: 3px;
+}
+
+footer .footer_list .footer_listElem a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footer_list .footer_listElem a i {
+  width: 25px;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes rot1 {
+  100% {
+    transform: skew(-10deg) translateX(50px) rotate(405deg);
+  }
+}
+
+@keyframes rot2 {
+  100% {
+    transform: skew(-10deg) rotate(525deg);
+  }
+}
+
+@keyframes rot3 {
+  100% {
+    transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(645deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms 2s forwards;
+  transform-origin: top;
+}
+
+.loader .loader_logo {
+  position: fixed;
+  left: calc(50% - 125px);
+  top: calc(50vh - 75px);
+}
+
+.loader .loader_logo div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-top: 20px solid;
+  border-radius: 50%;
+}
+
+.loader .loader_logo .first {
+  transform: skew(-10deg) translateX(50px) rotate(45deg);
+  animation: rot1 1.5s ease infinite;
+  border-color: #9356DC;
+}
+
+.loader .loader_logo .second {
+  transform: skew(-10deg) rotate(165deg);
+  animation: rot2 1.5s ease infinite;
+  border-color: #FF79DA;
+}
+
+.loader .loader_logo .third {
+  transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(285deg);
+  animation: rot3 1.5s ease infinite;
+  border-color: #99E2D0;
+}
+
+#restaurant_page .title_pages {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#restaurant_page .title_pages .header_arrow::before {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: black;
+}
+
+h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+}
+
+.container_menu {
+  margin: auto;
+  background-color: #F7F7F6;
+  max-width: 1280px;
+}
+
+.container_menu h2 {
+  font-size: 30px;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.space_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  background-color: #F7F7F6;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  margin-top: -30px;
+  padding-top: 40px;
+}
+
+.space_between .fa-heart {
+  background-color: #F7F7F6 !important;
+}
+
+.menu_category {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.menu_category h3 {
+  text-transform: uppercase;
+  font-weight: 200;
+  position: relative;
+  padding: 30px 0px 0px 20px;
+}
+
+.menu_category h3::after {
+  content: "";
+  display: block;
+  background-color: #99E2D0;
+  width: 45px;
+  height: 3px;
+}
+
+.menu--item {
+  padding: 16px 0px 16px 16px;
+  margin: 16px;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 1px #f2f2f2;
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+
+.menu--item:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.menu--item:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.menu--item:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+.menu--item:nth-child(5) {
+  animation-delay: 500ms;
+}
+
+.menu--item .menu--item__price {
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 8px;
+}
+
+.menu--item .menu--item__description {
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.menu--item .menu--item__description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu--item .menu--item__check {
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  margin: -16px 0px -16px 16px;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  transition: 400ms linear;
+  flex-shrink: 0;
+  width: 64px;
+  margin-right: -64px;
+}
+
+.menu--item:hover .menu--item__check {
+  margin-right: 0;
+}
+
+.menu--item:hover .menu--item__check i {
+  transform: rotate(1turn);
+  transition-duration: 250ms;
+  transition-delay: 150ms;
+}
+
+.position_btn {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.position_btn .btn {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 18px 30px;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
+  background-color: black;
+  border: none;
+  box-shadow: 2px 1px 8px -3px black;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  transition-duration: 0.25s;
+}
+
+.position_btn .btn:hover {
+  background-color: white;
+  box-shadow: 2px 1px 12px -3px black;
+}
+
+.btn_like {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn_like:hover .btn_full {
+  transform: scale(1);
+}
+
+.btn_full {
+  transition-duration: 0.5s;
+  position: absolute;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(0);
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes rot1 {
+  100% {
+    transform: skew(-10deg) translateX(50px) rotate(405deg);
+  }
+}
+
+@keyframes rot2 {
+  100% {
+    transform: skew(-10deg) rotate(525deg);
+  }
+}
+
+@keyframes rot3 {
+  100% {
+    transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(645deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms 2s forwards;
+  transform-origin: top;
+}
+
+.loader .loader_logo {
+  position: fixed;
+  left: calc(50% - 125px);
+  top: calc(50vh - 75px);
+}
+
+.loader .loader_logo div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-top: 20px solid;
+  border-radius: 50%;
+}
+
+.loader .loader_logo .first {
+  transform: skew(-10deg) translateX(50px) rotate(45deg);
+  animation: rot1 1.5s ease infinite;
+  border-color: #9356DC;
+}
+
+.loader .loader_logo .second {
+  transform: skew(-10deg) rotate(165deg);
+  animation: rot2 1.5s ease infinite;
+  border-color: #FF79DA;
+}
+
+.loader .loader_logo .third {
+  transform: skew(-10deg) translateX(20px) translateY(-50px) rotate(285deg);
+  animation: rot3 1.5s ease infinite;
+  border-color: #99E2D0;
+}
+
+@media (min-width: 992px) {
+  .tutorial_list {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  #menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+  #menu h2 {
+    grid-column: 1/3;
+  }
+  .restaurant_links {
+    padding: 0;
+  }
+  .tutorial_list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menus_category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+  }
+}
+/*# sourceMappingURL=style2.css.map */

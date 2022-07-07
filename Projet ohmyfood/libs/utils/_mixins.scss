@@ -9,21 +9,6 @@
     font-weight: $font-weight;
 }
 
-//Création de l'icone coeur, on passe d'un coeur sans fond à un coeur solid avec le dégradé
-@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
-    @include font-awesome($font-weight);
-    content: "\f004";
-    font-size: 25px;
-    right: 30px;
-    top: 20%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: $color;
-    background-image: linear-gradient($secondary, $primary);
-    opacity: $opacity;
-    transition: all 200ms linear;
-}
-
 //Optimisation des borders radius
 @mixin border-radius($radius) {
     border-radius: $radius;

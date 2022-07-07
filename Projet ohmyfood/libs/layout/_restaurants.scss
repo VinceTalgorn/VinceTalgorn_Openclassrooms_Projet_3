@@ -43,57 +43,28 @@
     }
 }
 
-.btn {
-    &_like {
-        height: 2rem;
-        width: 2rem;
-        border: transparent 0px solid;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
-        background-color: black;
-        &:hover::before {
-            opacity: 1;
-        }
-        &::before {
-            opacity: 0;
-            transition: 0.5s;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(0deg, $secondary 0%, $primary 100%);
-        }
-        .fa-heart {
-            background-color: white !important;
-        }
-    }
-    &_info {
-        transition-duration: 0.25s;
-        background-color: #f6f6f6;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        mix-blend-mode: lighten;
-    }
-    &_like:hover {
-        .like {
-            &_Nobackground {
-                opacity: 0;
-            }
+.btn_like {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        .btn_full {
+            transform: scale(1);
         }
     }
 }
+.btn_full {
+    transition-duration: 0.5s;
+    position: absolute;
+    background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0);
+}
+
 // Création de la bannière "Nouveau" dans les images
 .new_menus {
     position: relative;
